@@ -32,7 +32,7 @@ aht_rh = 0
 aht_crc = 0
 aht_status = 0
 
-url = 'palamoa.de/json/0C0jVaMn7YkhRwzDE71GlSuK'
+url = 'palamoa.de/json/palamoa_key'
 
 
 led1 = LED(1)
