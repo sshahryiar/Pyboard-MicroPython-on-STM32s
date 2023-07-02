@@ -64,7 +64,8 @@ def screen_2_graphics(value):
     
     dial = contrain(value, 0, 100)
     line = map_value(dial, 0, 100, -2.618, 2.618)    
-    tft.line(60, 80, (60 + int(30 * math.sin(line))), int(80 - (30 * math.cos(line))), tft.YELLOW)
+    tft.line(60, 80, (60 + int(36 * math.sin(line))), int(80 - (36 * math.cos(line))), tft.YELLOW)
+    tft.line(60, 80, (60 - int(10 * math.sin(line))), int(80 + (10 * math.cos(line))), tft.YELLOW)
     tft.ellipse(60, 80, 3, 3, tft.YELLOW, True)
     
     tft.text("0%", 4, 100, tft.WHITE)
@@ -155,4 +156,4 @@ while(True):
         aht_rh, aht_t, aht_status, aht_crc = rht.read_sensor()
         screen_counter = 0
         
-    sleep_ms(2400)
+    sleep_ms(2000)
