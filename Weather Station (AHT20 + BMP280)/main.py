@@ -1,4 +1,3 @@
-from pyb import LED
 from machine import Pin, I2C
 from AHT20 import AHT20
 from BMP280 import BMP280
@@ -62,7 +61,7 @@ def screen_2_graphics(value):
     tft.ellipse(60, 80, 44, 44, tft.WHITE)
     tft.ellipse(60, 80, 40, 40, tft.WHITE)
     
-    dial = contrain(value, 0, 100)
+    dial = constrain(value, 0, 100)
     line = map_value(dial, 0, 100, -2.618, 2.618)    
     tft.line(60, 80, (60 + int(36 * math.sin(line))), int(80 - (36 * math.cos(line))), tft.YELLOW)
     tft.line(60, 80, (60 - int(10 * math.sin(line))), int(80 + (10 * math.cos(line))), tft.YELLOW)
@@ -93,7 +92,7 @@ def screen_3_graphics(value):
     tft.text("900", 138, 108, tft.BLACK)
     tft.text("1100", 194, 108, tft.BLACK)
     
-    temp = contrain(value, 300, 1200)
+    temp = constrain(value, 300, 1200)
     temp = int(map_value(temp, 300, 1200, 10, 230))
     tft.line(temp, 95, (temp - 4), 90, tft.WHITE)
     tft.line(temp, 95, (temp + 4), 90, tft.WHITE)
@@ -109,7 +108,7 @@ def map_value(v, x_min, x_max, y_min, y_max):
     return int(y_min + (((y_max - y_min)/(x_max - x_min)) * (v - x_min)))
 
 
-def contrain(value, min_value, max_value):
+def constrain(value, min_value, max_value):
     if(value > max_value):
         return max_value
     
