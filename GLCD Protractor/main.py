@@ -46,7 +46,7 @@ def map_value(v, x_min, x_max, y_min, y_max):
     return (y_min + (((y_max - y_min) / (x_max - x_min)) * (v - x_min)))
 
 
-def contrain(value, min_value, max_value):
+def constrain(value, min_value, max_value):
     if(value > max_value):
         return max_value
     
@@ -59,7 +59,7 @@ def contrain(value, min_value, max_value):
     
 while(True):
     acc_x, acc_y, acc_z = accel.filtered_xyz()
-    degrees = contrain(acc_x, -80, 80)
+    degrees = constrain(acc_x, -80, 80)
     degrees = map_value(degrees, -80, 80, -90, 90)
     glcd.fill(glcd.WHITE)
     glcd.blit(img, 3, 10)
