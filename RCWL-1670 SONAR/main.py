@@ -30,6 +30,7 @@ def measure_and_show():
     
     elif((distance >= 600) and (distance < 800)):
         lcd.set_RGB(0, 0, 255)
+        
     else:
         lcd.set_RGB(255, 255, 255)
     
