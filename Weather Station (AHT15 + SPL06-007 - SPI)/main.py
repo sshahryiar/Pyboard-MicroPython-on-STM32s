@@ -1,6 +1,5 @@
 from pyb import LED, Pin, SPI
 from machine import I2C
-from micropython import const
 from SSD1306_I2C import OLED1306
 from AHT15 import AHT15
 from SPL06_007_SPI import SPL06
@@ -68,7 +67,7 @@ while(True):
     print("R.H./%: " + str("%2.2f" %AHT15_RH))
     print("P/mBar: " + str("%2.2f" %SPL06_P))
     print(" ")
-    led.toggle()
-    
+
+    led.toggle()    
     sleep_ms(1000)
     
