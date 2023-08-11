@@ -46,7 +46,6 @@ rht = AHT15(TWI)
 oled = OLED1306(TWI)
 oled.fill(oled.BLACK)
 oled.show()
-#sleep_ms(1000)
 
 
 while(True):
