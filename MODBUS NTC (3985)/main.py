@@ -1,4 +1,4 @@
-from pyb import LED, UART
+from pyb import UART
 from machine import I2C
 from SH1107 import OLED
 from MODBUS_NTC import MODBUS_NTC
@@ -44,7 +44,7 @@ oled.show()
 while(True):
     t = ntc.get_temp()
     
-    if((t >= -30) and (t <= 110)):
+    if((t >= 0) and (t <= 100)):
         t_str = "T/deg C: " + str("%3.1f" %t)
     else:
         t_str = "T/deg C: ---"
