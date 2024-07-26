@@ -13,28 +13,28 @@ ToF_inquire_function_mark = const(0x10)
 ToF_settings_frame_header = const(0x54)
 ToF_settings_function_mark = const(0x20)
 
-Tof_output_mode_active = const(0x00)
-Tof_output_mode_inquire = const(0x02)
+ToF_output_mode_active = const(0x00)
+ToF_output_mode_inquire = const(0x02)
 
-Tof_output_range_mode_short = const(0x00)
-Tof_output_range_mode_medium = const(0x08)
-Tof_output_range_mode_long = const(0x04)
+ToF_output_range_mode_short = const(0x00)
+ToF_output_range_mode_medium = const(0x08)
+ToF_output_range_mode_long = const(0x04)
 
-Tof_output_interface_UART = const(0x00)
-Tof_output_interface_CAN = const(0x01)
-Tof_output_interface_IO = const(0x10)
-Tof_output_interface_I2C = const(0x11)
+ToF_output_interface_UART = const(0x00)
+ToF_output_interface_CAN = const(0x01)
+ToF_output_interface_IO = const(0x10)
+ToF_output_interface_I2C = const(0x11)
 
-Tof_UART_Baud_115200 = const(115200)
-Tof_UART_Baud_230400 = const(230400)
-Tof_UART_Baud_460800 = const(460800)
-Tof_UART_Baud_921600 = const(921600)
+ToF_UART_Baud_115200 = const(115200)
+ToF_UART_Baud_230400 = const(230400)
+ToF_UART_Baud_460800 = const(460800)
+ToF_UART_Baud_921600 = const(921600)
 
-Tof_CAN_Baud_1000000 = const(1000000)
-Tof_CAN_Baud_1200000 = const(1200000)
-Tof_CAN_Baud_1500000 = const(1500000)
-Tof_CAN_Baud_2000000 = const(2000000)
-Tof_CAN_Baud_3000000 = const(3000000)
+ToF_CAN_Baud_1000000 = const(1000000)
+ToF_CAN_Baud_1200000 = const(1200000)
+ToF_CAN_Baud_1500000 = const(1500000)
+ToF_CAN_Baud_2000000 = const(2000000)
+ToF_CAN_Baud_3000000 = const(3000000)
 
 
 class waveshare_ToF():
@@ -49,8 +49,8 @@ class waveshare_ToF():
     def settings(self,
                  ID = 0,
                  terminal_time = ticks_ms(),
-                 mode = (Tof_output_mode_inquire | Tof_output_range_mode_long | Tof_output_interface_UART),
-                 baud_rate = Tof_UART_Baud_115200,
+                 mode = (ToF_output_mode_inquire | ToF_output_range_mode_long | ToF_output_interface_UART),
+                 baud_rate = ToF_UART_Baud_115200,
                  band_start = 0,
                  bandwidth = 0):
         
